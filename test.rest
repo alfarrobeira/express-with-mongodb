@@ -1,0 +1,28 @@
+@host = http://localhost:5050
+
+###
+GET {{host}}
+
+###
+GET {{host}}/student
+
+###
+POST {{host}}/student
+Content-Type: application/json
+
+{
+    "first_name": "Tina",
+    "name": 5,
+    "email": "tina@t.com"
+}
+
+###
+PUT {{host}}/student/6432cccbd41a8479dbfa3eb4
+Content-Type: application/json
+
+{
+    "first_name": "Tanja"
+}
+
+###
+DELETE {{host}}/student/6432cd15d41a8479dbfa3eba
